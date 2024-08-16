@@ -2,7 +2,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Navbar from "./components/Navbar/Navbar";
 import { useState } from "react";
 import { Button, Text, Flex } from "@chakra-ui/react";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemListContainer from "./components/itemListContainer/itemListContainer";
+ItemListContainer;
 //import ItemListContainer from "./components/ItemListContainer/";
 function App() {
   const [count, setCount] = useState(0);

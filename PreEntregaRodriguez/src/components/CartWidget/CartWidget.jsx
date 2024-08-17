@@ -4,8 +4,8 @@ import { BsCart3 } from "react-icons/bs";
 const CartWidget = () => {
   return (
     <>
-      <Flex>
-        <BsCart3></BsCart3>
+      <Flex alignItems={"center"} justifyContent={"center"}>
+        <BsCart3 color="red" size={"30px"}></BsCart3>
         <Text>5</Text>
       </Flex>
     </>

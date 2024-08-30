@@ -19,7 +19,7 @@ import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { CartWidget } from "../CartWidget/CartWidget";
 //import CartWidget from "../CartWidget/CartWidget";
 
-export default function NavBar() {
+export function NavBar() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>

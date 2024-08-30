@@ -1,20 +1,11 @@
 import { ChakraProvider, Spinner, Flex } from "@chakra-ui/react";
-import { useState, useEffect } from "react";
-import { getAllProducts } from "./services/products";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
-import { Layout } from "./components/Layout/Layout";
+import { Layout } from "./Layout/Layout";
+import { useProducts } from "./hooks";
 
 function App() {
   // 2. Wrap ChakraProvider at the root of your app
-  const [dataProducts, setDataProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    getAllProducts()
-      .then((resp) => setDataProducts(resp.products))
-      .catch(console.log)
-      .finally(setLoading(false));
-  }, []);
-
+  const { dataProducts, loading } = useProducts();
   return (
     <ChakraProvider>
       \{" "}

@@ -1,9 +1,8 @@
-// 1. import `ChakraProvider` component
-import { ChakraProvider, Spinner } from "@chakra-ui/react";
-import NavBar from "./components/NavBar";
-import ItemListContainer from "./components/ItemListContainer";
+import { ChakraProvider, Spinner, Flex } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { getAllProducts } from "./services/products";
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+import { Layout } from "./components/Layout/Layout";
 
 function App() {
   // 2. Wrap ChakraProvider at the root of your app
@@ -18,13 +17,21 @@ function App() {
 
   return (
     <ChakraProvider>
-      <NavBar></NavBar>
-      {loading ? (
-        <Spinner></Spinner>
-      ) : (
-        <ItemListContainer products={dataProducts}></ItemListContainer>
-      )}
-      <ItemListContainer products={dataProducts}></ItemListContainer>
+      \{" "}
+      <Layout>
+        {loading ? (
+          <Flex
+            width={"100%"}
+            height={"90vh"}
+            alignItems={"center"}
+            justifyContent={"center"}
+          >
+            <Spinner size="xl" />
+          </Flex>
+        ) : (
+          <ItemListContainer products={dataProducts} />
+        )}
+      </Layout>
     </ChakraProvider>
   );
 }

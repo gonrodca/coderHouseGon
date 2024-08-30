@@ -13,7 +13,7 @@ import {
   Button,
   Box,
 } from "@chakra-ui/react";
-const ItemListContainer = ({ products }) => {
+export const ItemListContainer = ({ products }) => {
   return (
     <Box display={"flex"} flexWrap={"wrap"}>
       {products.map((product) => (
@@ -49,4 +49,4 @@ const ItemListContainer = ({ products }) => {
   );
 };
 
-export default ItemListContainer;
+//export default ItemListContainer;

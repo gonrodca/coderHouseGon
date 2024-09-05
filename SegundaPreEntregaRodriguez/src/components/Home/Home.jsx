@@ -1,8 +1,16 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Spinner } from "@chakra-ui/react";
 import { useProducts } from "../../hooks/useProducts";
+import { ItemListContainer } from "../ItemListContainer/ItemListContainer";
 
 export const Home = () => {
   const { dataProducts, loading } = useProducts();
-  console.log(dataProducts);
-  return <></>;
+  return (
+    <>
+      {loading ? (
+        <Spinner></Spinner>
+      ) : (
+        <ItemListContainer products={dataProducts} />
+      )}
+    </>
+  );
 };

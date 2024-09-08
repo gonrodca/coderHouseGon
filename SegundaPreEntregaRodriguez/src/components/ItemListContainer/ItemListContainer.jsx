@@ -15,7 +15,7 @@ export const ItemListContainer = ({ products }) => {
   console.log({ products });
   return (
     <>
-      {products.map((product) => {
+      {products.map((prod) => {
         <Card maxW="sm">
           <CardBody>
             <Image

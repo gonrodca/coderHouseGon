@@ -9,7 +9,7 @@ export const Home = () => {
       {loading ? (
         <Spinner></Spinner>
       ) : (
-        <ItemListContainer products={dataProducts} />
+        <ItemListContainer products={dataProducts}> </ItemListContainer>
       )}
     </>
   );

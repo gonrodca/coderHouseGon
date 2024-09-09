@@ -39,6 +39,7 @@ export const ItemListContainer = ({ products }) => {
                 
 
               </Button> */}
+              <Link to={`/Item/${product.id}`}>Detalle producto</Link>
             </ButtonGroup>
           </CardFooter>
         </Card>

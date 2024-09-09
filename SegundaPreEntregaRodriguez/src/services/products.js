@@ -3,3 +3,14 @@ export async function getAllProducts() {
     res.json()
   );
 }
+export async function productById({ id }) {
+  return await fetch(`https://dummyjson.com/products/${id}`).then((res) =>
+    res.json()
+  );
+}
+
+export async function categoryProduct({ id }) {
+  return await fetch(`https://dummyjson.com/products/category/${id}`).then(
+    (res) => res.json()
+  );
+}
